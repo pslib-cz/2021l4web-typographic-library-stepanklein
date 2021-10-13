@@ -5,6 +5,8 @@ body{
     font-weight: 500;
     font-size: 15px;
     margin: 0;
+    background-color: rgb(240, 240, 240);
+    color:rgb(0, 20, 56);
     
 }
 section, main{
@@ -14,7 +16,11 @@ section, main{
 main{
     width: 90vw;
     margin:auto;
+    margin-top: 2em;
 }
+
+
+/*headings*/
 
 h1, .heading-1{
     font-weight: 600;
@@ -64,6 +70,9 @@ h6, .heading-6{
     margin: 0 0 0.5em 0;
      color: rgb(0, 58, 167);
 }
+
+
+/*text*/
 a{
     font-weight: 700;
     text-decoration: none;
@@ -85,24 +94,73 @@ mark{
     color: rgb(29, 108, 255);
 }
 
+
+/*lists*/
+ol{
+    counter-reset: counter;
+    list-style-type: none;
+}
+ol li:before {
+    counter-increment: counter;
+    content: counters(counter, ".") ". " ;
+}
+
+
+/*quotes*/
+blockquote{
+    background-color: rgb(202, 202, 202);
+    padding: 1em;
+    margin: 1em 0 1em 0;
+    padding-top: 0.1em;
+    border-radius: 15px;
+}
+blockquote > figcaption::before{
+ content: "— ";
+}
+blockquote > p::after{
+    content: close-quote;
+}
+blockquote > p::before{
+  content: open-quote;
+}
+
+
+/*table*/
+th, td{
+    padding: 0.8em;
+    border: 1px solid rgb(173, 173, 173);
+}
+table{
+    border-collapse: collapse;
+}
+th{
+    background-color: rgb(26, 26, 26); 
+    color: rgb(240, 240, 240);
+}
+tr:nth-child(even){
+   background-color: rgb(202, 202, 202);
+}
+
+
 /* menu */
 .menu{
-    background-color:  rgb(172, 172, 172);
+    background-color: rgb(26, 26, 26);
+    color:rgb(240, 240, 240);
 }
 
 .menu-top{
 margin: 0;
 display: flex;
 position: sticky;
-width: 100vw;
+width: 100%;
 top: 0;
 right: 0;
 align-content: center;
 
 }
 .menu-top > .menu__items {
-    width: 100vw;
-    height: 60px;
+    width: 100%;
+   
     display: flex;
     justify-content: center;
     }
@@ -113,22 +171,42 @@ padding: 0;
 }
 .menu__item{
 display: block;
-padding: 0 1em 0 1em;
+padding: 0;
 display: flex;
 align-items: center;
 
 }
 .menu__item>a{
 width: 100%;
-height: 100%;
-    
+color:rgb(240, 240, 240);
+    text-align: center;
+   padding: 1em;
+   font-size: 16px;
     }
 .menu__item:hover{
-    background-color:  rgb(209, 209, 209);
+    background-color: rgb(29, 108, 255);
     
     }
-.menu__item--home{
-    
+.menu__item-home{
+    background: rgb(87, 87, 87)
     }
 
-/* /menu */
+/*scrollbar*/
+
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+
+  ::-webkit-scrollbar-track {
+    background: rgb(26, 26, 26); 
+    
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(87, 87, 87); 
+        
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(117, 117, 117); 
+  }
