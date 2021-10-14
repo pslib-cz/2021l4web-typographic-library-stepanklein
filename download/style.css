@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 body{
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
     font-size: 15px;
     margin: 0;
     background-color: rgb(240, 240, 240);
-    color:rgb(0, 20, 56);
-    
+    color:rgb(0, 20, 56);   
+}
+.body-flex{
+display: flex;
 }
 section, main{
     margin: 0 0 20px 0;
@@ -16,7 +18,8 @@ section, main{
 main{
     width: 90vw;
     margin:auto;
-    margin-top: 2em;
+    margin-top: 5em;
+    padding-left: 20px;
 }
 
 
@@ -27,7 +30,7 @@ h1, .heading-1{
     font-size: 40px;
     text-transform: uppercase;
     margin: 0 0 0.5em 0;
-    color: rgb(29, 108, 255);
+    color: rgb(26, 26, 26);
 }
 
 h2, .heading-2{
@@ -70,6 +73,7 @@ h6, .heading-6{
     margin: 0 0 0.5em 0;
      color: rgb(0, 58, 167);
 }
+
 
 
 /*text*/
@@ -142,28 +146,70 @@ tr:nth-child(even){
 }
 
 
+code{
+    font-family: 'IBM Plex Mono', monospace;
+   
+}
+code > pre{
+    background-color: rgb(202, 202, 202);
+    padding: 1em;
+    margin: 1em 0 1em 0;
+    border-radius: 15px;
+    overflow-x: scroll;
+}
+
 /* menu */
 .menu{
-    background-color: rgb(26, 26, 26);
+    
     color:rgb(240, 240, 240);
 }
 
 .menu-top{
+    background-color: rgb(26, 26, 26);
 margin: 0;
 display: flex;
 position: sticky;
 width: 100%;
 top: 0;
 right: 0;
-align-content: center;
-
+align-items: center;
+justify-content: space-between;
 }
-.menu-top > .menu__items {
-    width: 100%;
-   
+.menu-top-fixed{
+    position: fixed;
+}
+.menu-top > .menu__items{
     display: flex;
     justify-content: center;
-    }
+    margin-right: 20px;
+}
+.menu-top > .logo{
+    background-color: rgb(26, 26, 26);
+    height: 100%;
+    margin-left: 1em;
+    font-size: 25px;
+    color:rgb(240, 240, 240) ;
+    white-space: nowrap;
+   
+}
+
+.menu-left{
+height: 100%;
+
+}
+
+.menu-left > .menu__items{
+    position: fixed;
+    background-color: rgb(26, 26, 26);
+}
+.menu-left > .logo{
+    background-color: rgb(26, 26, 26);
+    padding: 1em;
+    font-size: 25px;
+    color:rgb(240, 240, 240) ;
+    white-space: nowrap;
+   
+}
 .menu__items{
 margin: 0;
 padding: 0;
@@ -180,7 +226,7 @@ align-items: center;
 width: 100%;
 color:rgb(240, 240, 240);
     text-align: center;
-   padding: 1em;
+   padding: 1.5em;
    font-size: 16px;
     }
 .menu__item:hover{

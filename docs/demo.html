@@ -4,29 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Typographic library</title>
+    <script src="./demo.js" defer></script>
     <link rel="stylesheet" href="../download/style.css">
 </head>
-<body>
-    <header>
-        <nav class="menu menu-top">
+<body >
+    <header  id="home">
+       
+        <nav id="navTop" class="menu menu-top menu-top-fixed">
+            <div class="logo">
+                <span>TYPOGRAPHIC LIBRARY</span>
+            </div>
             <ul class="menu__items">
                 <li class="menu__item menu__item-home">
-                    <a href="#headings">Headings</a>
+                    <a href="#home">Home</a>
                 </li>
                 <li class="menu__item">
                     <a href="#headings">Headings</a>
                 </li>
                 <li class="menu__item">
-                    <a href="#headings">Headings</a>
+                    <a href="#text">Text</a>
                 </li>
                 <li class="menu__item">
-                    <a href="#headings">Headings</a>
+                    <a href="#list">Lists</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#quote">Quotes</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#table">Table</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="home">
         <h1>Typographic library</h1>
         <section id="headings">
             <h2>Headings</h2>
@@ -41,9 +52,9 @@
             </div>
         </section>
 
-        <section>
-            <h2>Paragraph</h2>
-            <h3>Text</h3>
+        <section id="text">
+            <h2>Text</h2>
+            <h3>Paragraph</h3>
             <div>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin in tellus sit amet nibh dignissim sagittis. Nullam dapibus fermentum ipsum. Integer vulputate sem a nibh rutrum consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Nulla est. Nunc dapibus tortor vel mi dapibus sollicitudin. Et harum quidem rerum facilis est et expedita distinctio. Nulla non arcu lacinia neque faucibus fringilla. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Pellentesque sapien. Aliquam erat volutpat. Suspendisse sagittis ultrices augue. Integer in sapien. Pellentesque arcu. Maecenas aliquet accumsan leo. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.</p>
                 <p>Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Suspendisse sagittis ultrices augue. Mauris elementum mauris vitae tortor. Etiam dictum tincidunt diam. Nulla non arcu lacinia neque faucibus fringilla. Aliquam id dolor. Aenean fermentum risus id tortor. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Praesent dapibus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean id metus id velit ullamcorper pulvinar. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Pellentesque pretium lectus id turpis. Morbi leo mi, nonummy eget tristique non, rhoncus non leo. Aenean vel massa quis mauris vehicula lacinia. Fusce tellus. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Maecenas libero. Integer malesuada.</p>
@@ -54,7 +65,7 @@
 
             </div>
         </section>
-        <section>
+        <section  id="list">
             <h2>Lists</h2>
             <h3>Unordered list</h3>
             <ul>
@@ -82,7 +93,7 @@
             </ol>
 
         </section>
-        <section>
+        <section id="quote">
            <h2>Quotes</h2>
            <h3>Blockquote</h3>
            <blockquote>
@@ -92,14 +103,49 @@
            <h3>Inline quote</h3>
            <q>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</q>
         </section>
-        <section>
-            <h3>Tables</h3>
+        <section id="table">
+            <h2>Tables</h2>
            <table>
             <tr><th>first name </th><th>surname </th><th>age </th></tr>
             <tr><td>Dalibor</td><td>Čirlič</td><td>19</td></tr>
             <tr><td>Adam</td><td>Šafr</td><td>18</td></tr>
             <tr><td>Jaroslav</td><td>Vasatejl</td><td>19</td></tr>
            </table>
+        </section>
+
+        <section id="components">
+            <h2>Components</h2>
+            <h3>Nav Bar</h3>
+           <code>
+                <pre>
+ &lt;header  id=&quot;home&quot;&gt;
+    &lt;nav class=&quot;menu menu-top <span id="fixed">menu-top-fixed</span> &quot;&gt;
+    &lt;div class=&quot;logo&quot;&gt; &lt;span&gt;TYPOGRAPHIC LIBRARY&lt;/span&gt; &lt;/div&gt;
+        &lt;ul class=&quot;menu__items&quot;&gt;
+            &lt;li class=&quot;menu__item menu__item-home&quot;&gt;
+                &lt;a href=&quot;#home&quot;&gt;Home&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;menu__item&quot;&gt;
+                &lt;a href=&quot;#headings&quot;&gt;Headings&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;menu__item&quot;&gt;
+                &lt;a href=&quot;#text&quot;&gt;Text&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;menu__item&quot;&gt;
+                &lt;a href=&quot;#list&quot;&gt;Lists&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;menu__item&quot;&gt;
+                &lt;a href=&quot;#quote&quot;&gt;Quotes&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;menu__item&quot;&gt;
+                &lt;a href=&quot;#table&quot;&gt;Table&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;</pre>
+           </code>
+           <input type="checkbox" checked="checked" name="isFixed" id="isFixed" onclick="NavFixed(this)">
+           <label for="isFixed"> position: fixed;</label>
         </section>
     </main>
 </body>
